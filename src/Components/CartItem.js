@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-
+import * as Message from './../contants/Message'
 class CartItem extends Component {
   render(){
       var { item } = this.props;
     //  console.log(item);
   return (
-    <tr>
+            <tr>
                     <th scope="row">
                         <img src={item.product.image}  alt={item.product.name} className="img-fluid z-depth-0"/>
                         
@@ -20,20 +20,21 @@ class CartItem extends Component {
                     <td className="center-on-small-only">
                         <span className="qty">{item.quantity} </span>
                         <div className="btn-group radio-group" data-toggle="buttons">
-                            <label className="btn btn-sm btn-primary
-                                btn-rounded waves-effect waves-light">
-                                <a>—</a>
+                            <label className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
+                                onClick={() => this.onUpdateQuantity(item.product, item.quantity - 1)}>
+                                <span>—</span>
                             </label>
                             <label className="btn btn-sm btn-primary
-                                btn-rounded waves-effect waves-light">
-                                <a>+</a>
+                                btn-rounded waves-effect waves-light"
+                                onClick={() => this.onUpdateQuantity(item.product, item.quantity + 1)}>
+                                <span>+</span>
                             </label>
                         </div>
                     </td>
                     <td>{this.showSubTotal(item.product.price,item.quantity)}</td>
                     <td>
                         <button type="button" className="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top"
-                            title="" data-original-title="Remove item">
+                            title="" data-original-title="Remove item" onClick ={() => this.onDelete(item.product)}>
                             X
                         </button>
                     </td>
@@ -43,6 +44,16 @@ class CartItem extends Component {
 
     showSubTotal = (price,quantity) => {
         return price*quantity;
+    }
+
+    onDelete = (product) => {
+        this.props.onDeleteProductInCart(product);
+    }
+    onUpdateQuantity = (product,quantity) => {
+        if(quantity > 0) {
+            this.props.onUpdateProductInCart(product,quantity);
+            this.props.onChangeMessage(Message.MSG_UPDATE_CART_SUCCESS);
+        }
     }
 }
 

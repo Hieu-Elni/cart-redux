@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import CartItem from './CartItem';
-import CartResult from './CartResult';
+// import CartItem from './CartItem';
+// import CartResult from './CartResult';
 class Cart extends Component {
   render(){
 
@@ -20,9 +20,7 @@ class Cart extends Component {
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-               {children}
-            </tbody>
+            <tbody>{children}</tbody>
         </table>
     </div>
 </section>

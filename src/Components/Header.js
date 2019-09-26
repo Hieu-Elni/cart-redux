@@ -9,7 +9,7 @@ class Header extends Component {
             <ul id="slide-out" className="side-nav hidden custom-scrollbar sn-bg-2 ps ps--theme_default" data-ps-id="c27390a3-9efc-e0d8-197a-ab96d73a156a">
                 <li>
                     <div className="logo-wrapper waves-light waves-effect waves-light">
-                        <a>
+                        <a href="/">
                             <img src="http://mdbootstrap.com/img/logo/mdb-transparent.png" alt="" className="img-fluid flex-center" />
                         </a>
                     </div>
@@ -17,22 +17,22 @@ class Header extends Component {
                 <li>
                     <ul className="social">
                         <li>
-                            <a className="icons-sm fb-ic">
+                            <a href="/" className="icons-sm fb-ic">
                                 <i className="fa fa-facebook"> </i>
                             </a>
                         </li>
                         <li>
-                            <a className="icons-sm pin-ic">
+                            <a href="/" className="icons-sm pin-ic">
                                 <i className="fa fa-pinterest"> </i>
                             </a>
                         </li>
                         <li>
-                            <a className="icons-sm gplus-ic">
+                            <a href="/" className="icons-sm gplus-ic">
                                 <i className="fa fa-google-plus"> </i>
                             </a>
                         </li>
                         <li>
-                            <a className="icons-sm tw-ic">
+                            <a href="/" className="icons-sm tw-ic">
                                 <i className="fa fa-twitter"> </i>
                             </a>
                         </li>
@@ -49,7 +49,7 @@ class Header extends Component {
 
                     <ul className="collapsible collapsible-accordion">
                         <li>
-                            <a className="collapsible-header waves-effect arrow-r">
+                            <a  href="/" className="collapsible-header waves-effect arrow-r">
                                 <i className="fa fa-shopping-bag"></i> Product Page
                                 <i className="fa fa-angle-down rotate-icon"></i>
                             </a>
@@ -68,7 +68,7 @@ class Header extends Component {
                             </div>
                         </li>
                         <li className="active">
-                            <a className="collapsible-header waves-effect arrow-r active">
+                            <a href="/" className="collapsible-header waves-effect arrow-r active">
                                 <i className="fa fa-shopping-cart"></i> Cart Pages
                                 <i className="fa fa-angle-down rotate-icon"></i>
                             </a>
@@ -96,7 +96,7 @@ class Header extends Component {
                             </div>
                         </li>
                         <li>
-                            <a className="collapsible-header waves-effect arrow-r">
+                            <a href="/" className="collapsible-header waves-effect arrow-r">
                                 <i className="fa fa-dashboard"></i> Homepages
                                 <i className="fa fa-angle-down rotate-icon"></i>
                             </a>
@@ -124,7 +124,7 @@ class Header extends Component {
                             </div>
                         </li>
                         <li>
-                            <a className="collapsible-header waves-effect arrow-r">
+                            <a href="/" className="collapsible-header waves-effect arrow-r">
                                 <i className="fa fa-desktop"></i> Post Pages
                                 <i className="fa fa-angle-down rotate-icon"></i>
                             </a>
@@ -149,7 +149,7 @@ class Header extends Component {
                             </div>
                         </li>
                         <li>
-                            <a className="collapsible-header waves-effect arrow-r">
+                            <a href="/" className="collapsible-header waves-effect arrow-r">
                                 <i className="fa fa-diamond"></i> Category Pages
                                 <i className="fa fa-angle-down rotate-icon"></i>
                             </a>
@@ -190,7 +190,7 @@ class Header extends Component {
             <nav className="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark scrolling-navbar double-nav">
 
                 <div className="float-left">
-                    <a data-activates="slide-out" className="button-collapse">
+                    <a href="/" data-activates="slide-out" className="button-collapse">
                         <i className="fa fa-bars"></i>
                     </a>
                 </div>

@@ -3,10 +3,10 @@ import './App.css';
 
 import Header from './Components/Header';
 import ProductsContainer from './containers/ProductsContainer';
-import Message from './Components/Message';
 
 import Footer from './Components/Footer';
 import CartContainer from './containers/CartContainer';
+import MessageContainer from './containers/MessageContainer';
 class App extends Component {
   render(){
   return (
@@ -17,7 +17,7 @@ class App extends Component {
             <div className="container">
                
                 <ProductsContainer></ProductsContainer>
-                <Message></Message>
+                <MessageContainer></MessageContainer>
                
                 <CartContainer></CartContainer>
             </div>

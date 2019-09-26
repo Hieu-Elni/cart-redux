@@ -5,20 +5,20 @@ import ProductItem from './../Components/ProductItem';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { actAddToCart, actChangeMessage } from './../actions/index';
-import products from '../reducers/products';
+
 
 class ProductsContainer extends Component {
 
 
     showProducts(products) {
         var result = null;
-        var {onAddToCart} = this.props;
+        var {onAddToCart, onChangeMessage} = this.props;
         if(products.length >0 ){
             result = products.map((value,key) =>{
                 return <ProductItem key = {key} 
                 product = {value}
                 onAddToCart = {onAddToCart}
-
+                onChangeMessage = {onChangeMessage}
                 ></ProductItem>
             });
         }
@@ -30,8 +30,7 @@ render(){
     var {products} = this.props;
   return (
         <Products>
-            {this.showProducts(products)}   {/* dang children */}
-           
+            {this.showProducts(products)}   {/* dang children */}         
         </Products>
     ); 
 }
@@ -62,6 +61,9 @@ const mapDispatchToProps = (dispatch, props) => {
     return {
         onAddToCart : (product) => {
             dispatch(actAddToCart(product,1));
+        },
+        onChangeMessage : (message) => {
+            dispatch(actChangeMessage(message));
         }
     }
 }
